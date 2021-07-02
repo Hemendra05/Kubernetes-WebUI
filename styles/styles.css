@@ -43,9 +43,10 @@ h2 {
   /* margin: 10% auto auto; */
 }
 
-.buttons {
-  padding: 3% 9%;
-  text-align: center;
+.container-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .delete-all-btn {

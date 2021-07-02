@@ -112,135 +112,154 @@
           </div>
 
           <section id="pod" style="display: none">
-            <div class="row">
-              <div class="col">
-                <h2>Welcome to POD Service</h2>
-                <div class="buttons">
-                  <button type="button" class="btn btn-primary btn-lg" onclick="podInput()"><i class="fas fa-plus"></i> Create New</button>
-                  <button type="button" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
-                  <button type="button" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe Pod</button>
-                  <button type="button" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete Pod</button>
-                </div>
+            <div class="container-flex">
+              <div class="button">
+                <button type="" class="btn btn-primary btn-lg" onclick="podInput()"><i class="fas fa-plus"></i> Create New</button>
               </div>
-
-              <div id="pod-input" style="display: none">
-                <div style="display:flex;width:100%;">
-                  <form>
-                    <div style="width:100%;">
-                      <p>POD NAME</p>
-                      <input name="name">
-                    </div>
-                    <div style="width:100%;">
-                      <p>POD IMAGE</p>
-                      <input name="id">
-                    </div>
-                    <div style="width:100%;">
-                      <p>IMAGE TAG</p>
-                      <input name="id">
-                    </div>
-                    <p>
-                      <a>CONTINUE</a>
-                    </p>
-                  </form>
-                </div>
+              <div class="button">
+                <button type="" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
               </div>
-
+              <div class="button">
+                <button type="" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe Pod</button>
+              </div>
+              <div class="button">
+                <button type="" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete Pod</button>
+              </div>
             </div>
+
+            <div id="pod-input" style="display: none">
+              <div style="display:flex;width:100%;">
+                <form>
+                  <div style="width:100%;">
+                    <p>POD NAME</p>
+                    <input name="podName">
+                  </div>
+                  <div style="width:100%;">
+                    <p>POD IMAGE</p>
+                    <input name="imageName">
+                  </div>
+                  <div style="width:100%;">
+                    <p>IMAGE TAG</p>
+                    <input name="imageTag">
+                  </div>
+                  <button type="button" class="submit-button">Submit</button>
+                </form>
+              </div>
+            </div>
+
           </section>
 
-          <section id="deploy" style="display: none">
-            <div class="row">
-              <div class="col">
-                <h2>Welcome to Deployment Service</h2>
-                <div class="buttons">
-                  <button type="button" class="btn btn-primary btn-lg" onclick="deployInput()"><i class="fas fa-plus"></i> Create New</button>
-                  <button type="button" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
-                  <button type="button" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe Deployment</button>
-                  <button type="button" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete Deployment</button>
-                </div>
-              </div>
 
-              <div id="deploy-input" style="display: none">
-                <div style="display:flex;width:100%;">
-                  <form>
-                    <div style="width:100%;">
-                      <p>DEPLOYMENT NAME</p>
-                      <input name="name">
-                    </div>
-                    <div style="width:100%;">
-                      <p>IMAGE NAME</p>
-                      <input name="id">
-                    </div>
-                    <div style="width:100%;">
-                      <p>IMAGE TAG</p>
-                      <input name="id">
-                    </div>
-                    <p>
-                      <a>CONTINUE</a>
-                    </p>
-                  </form>
-                </div>
+
+          <section id="deploy" style="display: none">
+            <div class="container-flex">
+              <div class="">
+                <button type="button" class="btn btn-primary btn-lg" onclick="deployInput()"><i class="fas fa-plus"></i> Create New</button>
+              </div>
+              <div class="">
+                <button type="button" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
+              </div>
+              <div class="">
+                <button type="button" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe Deployment</button>
+              </div>
+              <div class="">
+                <button type="button" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete Deployment</button>
+              </div>
+            </div>
+
+            <div id="deploy-input" style="display: none">
+              <div style="display:flex;width:100%;">
+                <form>
+                  <div style="width:100%;">
+                    <p>DEPLOYMENT NAME</p>
+                    <input name="deployName">
+                  </div>
+                  <div style="width:100%;">
+                    <p>IMAGE NAME</p>
+                    <input name="deployImageName">
+                  </div>
+                  <div style="width:100%;">
+                    <p>IMAGE TAG</p>
+                    <input name="deployImageTag">
+                  </div>
+                  <button type="button" class="submit-button">Submit</button>
+                </form>
               </div>
             </div>
           </section>
 
           <section id="svc" style="display: none">
-            <div class="row">
-              <div class="col">
-                <h2>Welcome to Expose Service</h2>
-                <div class="buttons">
-                  <button type="button" class="btn btn-primary btn-lg"><i class="fas fa-plus"></i> Create New</button>
-                  <button type="button" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
-                  <button type="button" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe SVC</button>
-                  <button type="button" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete SVC</button>
-                </div>
+            <div class="container-flex">
+              <div class="">
+                <button type="button" class="btn btn-primary btn-lg" onclick="deployInput()"><i class="fas fa-plus"></i> Create New</button>
+              </div>
+              <div class="">
+                <button type="button" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
+              </div>
+              <div class="">
+                <button type="button" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe SVC</button>
+              </div>
+              <div class="">
+                <button type="button" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete SVC</button>
               </div>
             </div>
           </section>
 
           <section id="rs" style="display: none">
-            <div class="row">
-              <div class="col">
-                <h2>Welcome to Replica Set Service</h2>
-                <div class="buttons">
-                  <button type="button" class="btn btn-primary btn-lg"><i class="fas fa-plus"></i> Create New</button>
-                  <button type="button" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
-                  <button type="button" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe RS</button>
-                  <button type="button" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete RS</button>
-                </div>
+            <div class="container-flex">
+              <div class="">
+                <button type="button" class="btn btn-primary btn-lg" onclick="deployInput()"><i class="fas fa-plus"></i> Create New</button>
+              </div>
+              <div class="">
+                <button type="button" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
+              </div>
+              <div class="">
+                <button type="button" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe RS</button>
+              </div>
+              <div class="">
+                <button type="button" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete RS</button>
               </div>
             </div>
+
           </section>
 
           <section id="rc" style="display: none">
-            <div class="row">
-              <div class="col">
-                <h2>Welcome to Replication Controller Service</h2>
-                <div class="buttons">
-                  <button type="button" class="btn btn-primary btn-lg"><i class="fas fa-plus"></i> Create New</button>
-                  <button type="button" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
-                  <button type="button" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe RC</button>
-                  <button type="button" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete RC</button>
-                </div>
+            <div class="container-flex">
+              <div class="">
+                <button type="button" class="btn btn-primary btn-lg" onclick="deployInput()"><i class="fas fa-plus"></i> Create New</button>
+              </div>
+              <div class="">
+                <button type="button" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
+              </div>
+              <div class="">
+                <button type="button" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe RC</button>
+              </div>
+              <div class="">
+                <button type="button" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete RC</button>
               </div>
             </div>
+
           </section>
 
           <section id="ds" style="display: none">
-            <div class="row">
-              <div class="col">
-                <h2>Welcome to Daemon Set Service</h2>
-                <div class="buttons">
-                  <button type="button" class="btn btn-primary btn-lg"><i class="fas fa-plus"></i> Create New</button>
-                  <button type="button" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
-                  <button type="button" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe DS</button>
-                  <button type="button" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete DS</button>
-                </div>
+            <div class="container-flex">
+              <div class="">
+                <button type="button" class="btn btn-primary btn-lg" onclick="deployInput()"><i class="fas fa-plus"></i> Create New</button>
+              </div>
+              <div class="">
+                <button type="button" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
+              </div>
+              <div class="">
+                <button type="button" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe DS</button>
+              </div>
+              <div class="">
+                <button type="button" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete DS</button>
               </div>
             </div>
-          </section>
 
+          </section>
         </div>
+
       </div>
     </div>
   </section>

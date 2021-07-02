@@ -455,7 +455,7 @@ form>div>input {
   color: gray;
 }
 
-form>p:last-of-type>a {
+.submit-button {
   cursor: pointer;
   border: 0;
   padding: 10px 25px;
