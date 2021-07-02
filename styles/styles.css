@@ -1,28 +1,11 @@
-/* body {
-  background-color: #F6E6CB;
-} */
-
 img {
   height: 80%;
   width: 80%
 }
 
-.navbar {
-  margin-bottom: 0;
-  padding-bottom: 0
-}
-
 .navbar-brand {
   font-family: Ubuntu;
   font-weight: 900;
-}
-/*
-#dashboard {
-  padding: 7% 15%;
-} */
-
-.row {
-  padding: 3% 1%;
 }
 
 h1 {
@@ -40,20 +23,11 @@ h2 {
   font-family: Roboto Mono, cursive;
   font-weight: 600;
   text-align: center;
-  /* margin: 10% auto auto; */
+  margin: 10% auto auto;
 }
 
 .container-flex {
   display: flex;
   align-items: center;
   justify-content: space-around;
-}
-
-.delete-all-btn {
-  position: fixed;
-}
-
-.btn-position {
-  text-align: center;
-  padding-right: 18%
 }
