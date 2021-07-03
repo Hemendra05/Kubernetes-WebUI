@@ -5,21 +5,19 @@ function dashboard() {
 }
 
 function pod() {
-  document.getElementById("ds").style.display = "none";
   document.getElementById("welcomeStr").style.display = "none";
-  document.getElementById("rc").style.display = "none";
   document.getElementById("rs").style.display = "none";
   document.getElementById("svc").style.display = "none";
   document.getElementById("deploy").style.display = "none";
   document.getElementById("pod").style.display = "inline-block";
   document.getElementById("pod-input").style.display = "none";
+  document.getElementById("pod-describe").style.display = "none";
+  document.getElementById("pod-delete").style.display = "none";
   // document.getElementById("navbar").style.position = "fixed";
 }
 
 function deploy() {
-  document.getElementById("ds").style.display = "none";
   document.getElementById("welcomeStr").style.display = "none";
-  document.getElementById("rc").style.display = "none";
   document.getElementById("rs").style.display = "none";
   document.getElementById("svc").style.display = "none";
   document.getElementById("deploy").style.display = "inline-block";
@@ -29,9 +27,7 @@ function deploy() {
 }
 
 function svc() {
-  document.getElementById("ds").style.display = "none";
   document.getElementById("welcomeStr").style.display = "none";
-  document.getElementById("rc").style.display = "none";
   document.getElementById("rs").style.display = "none";
   document.getElementById("svc").style.display = "inline-block";
   document.getElementById("deploy").style.display = "none";
@@ -40,32 +36,8 @@ function svc() {
 }
 
 function rs() {
-  document.getElementById("ds").style.display = "none";
   document.getElementById("welcomeStr").style.display = "none";
-  document.getElementById("rc").style.display = "none";
   document.getElementById("rs").style.display = "inline-block";
-  document.getElementById("svc").style.display = "none";
-  document.getElementById("deploy").style.display = "none";
-  document.getElementById("pod").style.display = "none";
-  // document.getElementById("navbar").style.position = "fixed";
-}
-
-function rc() {
-  document.getElementById("ds").style.display = "none";
-  document.getElementById("welcomeStr").style.display = "none";
-  document.getElementById("rc").style.display = "inline-block";
-  document.getElementById("rs").style.display = "none";
-  document.getElementById("svc").style.display = "none";
-  document.getElementById("deploy").style.display = "none";
-  document.getElementById("pod").style.display = "none";
-  // document.getElementById("navbar").style.position = "fixed";
-}
-
-function ds() {
-  document.getElementById("ds").style.display = "inline-block";
-  document.getElementById("welcomeStr").style.display = "none";
-  document.getElementById("rc").style.display = "none";
-  document.getElementById("rs").style.display = "none";
   document.getElementById("svc").style.display = "none";
   document.getElementById("deploy").style.display = "none";
   document.getElementById("pod").style.display = "none";
@@ -74,11 +46,43 @@ function ds() {
 
 function podInput() {
   document.getElementById("pod-input").style.display = "inline-block";
+  document.getElementById("pod-describe").style.display = "none";
+  document.getElementById("pod-delete").style.display = "none";
+  // document.getElementById("pod").style.display = "block";
+}
+
+function podDescribe() {
+  document.getElementById("pod-describe").style.display = "inline-block";
+  document.getElementById("pod-input").style.display = "none";
+  document.getElementById("pod-delete").style.display = "none";
+  // document.getElementById("pod").style.display = "block";
+}
+
+function podDelete() {
+  document.getElementById("pod-delete").style.display = "inline-block";
+  document.getElementById("pod-input").style.display = "none";
+  document.getElementById("pod-describe").style.display = "none";
   // document.getElementById("pod").style.display = "block";
 }
 
 
 function deployInput() {
   document.getElementById("deploy-input").style.display = "inline-block";
+  document.getElementById("deploy-delete").style.display = "none";
+  document.getElementById("deploy-describe").style.display = "none";
+  // document.getElementById("pod").style.display = "block";
+}
+
+function deployDescribe() {
+  document.getElementById("deploy-input").style.display = "none";
+  document.getElementById("deploy-delete").style.display = "none";
+  document.getElementById("deploy-describe").style.display = "inline-block";
+  // document.getElementById("pod").style.display = "block";
+}
+
+function deployDelete() {
+  document.getElementById("deploy-input").style.display = "none";
+  document.getElementById("deploy-describe").style.display = "none";
+  document.getElementById("deploy-delete").style.display = "inline-block";
   // document.getElementById("pod").style.display = "block";
 }

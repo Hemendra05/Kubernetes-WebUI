@@ -14,8 +14,8 @@
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-  <link href="styles/bootstrap.min.css" rel="stylesheet">
-  <link href="styles/styles.css" rel="stylesheet">
+  <link href="static/bootstrap.min.css" rel="stylesheet">
+  <link href="static/styles.css" rel="stylesheet">
 
   <!-- JavaScript -->
   <script src="https://kit.fontawesome.com/de7f2d3cb1.js" crossorigin="anonymous"></script>
@@ -23,12 +23,12 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 
-  <script src="scripts/bootstrap.min.js"></script>
+  <script src="static/bootstrap.min.js"></script>
 
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
-  <script src="scripts/scripts.js"></script>
+  <script src="static/scripts.js"></script>
 
 </head>
 
@@ -36,7 +36,7 @@
   <!-- Navigation Bar -->
   <section id="nav-bar">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <a class="navbar-brand brand" style="color: #64CCDA" href="#">Kubernetes-WebUI</a>
+      <a class="navbar-brand brand" style="color: #64CCDA" href="index.html">Kubernetes-WebUI</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -95,8 +95,6 @@
               <li><a href="#" onclick="deploy()">Deployment</a></li>
               <li><a href="#" onclick="svc()">Service</a></li>
               <li><a href="#" onclick="rs()">Replica Sets</a></li>
-              <li><a href="#" onclick="rc()">Replication Controller</a></li>
-              <li><a href="#" onclick="ds()">Daemon Sets</a></li>
             </ul>
           </div>
 
@@ -120,10 +118,10 @@
                 <button type="" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
               </div>
               <div class="button">
-                <button type="" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe Pod</button>
+                <button type="" class="btn btn-info btn-lg" onclick="podDescribe()"><i class="fas fa-scroll"></i> Describe Pod</button>
               </div>
               <div class="button">
-                <button type="" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete Pod</button>
+                <button type="" class="btn btn-danger btn-lg" onclick="podDelete()"><i class="fas fa-trash"></i> Delete Pod</button>
               </div>
             </div>
 
@@ -147,23 +145,46 @@
               </div>
             </div>
 
+            <div id="pod-describe" style="display: none">
+              <div style="display:flex;width:100%;">
+                <form>
+                  <div style="width:100%;">
+                    <p>POD NAME</p>
+                    <input name="podName">
+                  </div>
+                  <button type="button" class="submit-button">Submit</button>
+                </form>
+              </div>
+            </div>
+
+            <div id="pod-delete" style="display: none">
+              <div style="display:flex;width:100%;">
+                <form>
+                  <div style="width:100%;">
+                    <p>POD NAME</p>
+                    <input name="podName">
+                  </div>
+                  <button type="button" class="submit-button">Submit</button>
+                </form>
+              </div>
+            </div>
           </section>
 
 
 
           <section id="deploy" style="display: none">
             <div class="container-flex">
-              <div class="">
+              <div class="button">
                 <button type="button" class="btn btn-primary btn-lg" onclick="deployInput()"><i class="fas fa-plus"></i> Create New</button>
               </div>
-              <div class="">
+              <div class="button">
                 <button type="button" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
               </div>
-              <div class="">
-                <button type="button" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe Deployment</button>
+              <div class="button">
+                <button type="button" class="btn btn-info btn-lg" onclick="deployDescribe()"><i class="fas fa-scroll"></i> Describe Deployment</button>
               </div>
-              <div class="">
-                <button type="button" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete Deployment</button>
+              <div class="button">
+                <button type="button" class="btn btn-danger btn-lg" onclick="deployDelete()"><i class="fas fa-trash"></i> Delete Deployment</button>
               </div>
             </div>
 
@@ -186,20 +207,44 @@
                 </form>
               </div>
             </div>
+
+            <div id="deploy-describe" style="display: none">
+              <div style="display:flex;width:100%;">
+                <form>
+                  <div style="width:100%;">
+                    <p>DEPLOYMENT NAME</p>
+                    <input name="deployName">
+                  </div>
+                  <button type="button" class="submit-button">Submit</button>
+                </form>
+              </div>
+            </div>
+
+            <div id="deploy-delete" style="display: none">
+              <div style="display:flex;width:100%;">
+                <form>
+                  <div style="width:100%;">
+                    <p>DEPLOYMENT NAME</p>
+                    <input name="deployName">
+                  </div>
+                  <button type="button" class="submit-button">Submit</button>
+                </form>
+              </div>
+            </div>
           </section>
 
           <section id="svc" style="display: none">
             <div class="container-flex">
-              <div class="">
+              <div class="button">
                 <button type="button" class="btn btn-primary btn-lg" onclick="deployInput()"><i class="fas fa-plus"></i> Create New</button>
               </div>
-              <div class="">
+              <div class="button">
                 <button type="button" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
               </div>
-              <div class="">
+              <div class="button">
                 <button type="button" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe SVC</button>
               </div>
-              <div class="">
+              <div class="button">
                 <button type="button" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete SVC</button>
               </div>
             </div>
@@ -207,53 +252,17 @@
 
           <section id="rs" style="display: none">
             <div class="container-flex">
-              <div class="">
+              <div class="button">
                 <button type="button" class="btn btn-primary btn-lg" onclick="deployInput()"><i class="fas fa-plus"></i> Create New</button>
               </div>
-              <div class="">
+              <div class="button">
                 <button type="button" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
               </div>
-              <div class="">
+              <div class="button">
                 <button type="button" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe RS</button>
               </div>
-              <div class="">
+              <div class="button">
                 <button type="button" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete RS</button>
-              </div>
-            </div>
-
-          </section>
-
-          <section id="rc" style="display: none">
-            <div class="container-flex">
-              <div class="">
-                <button type="button" class="btn btn-primary btn-lg" onclick="deployInput()"><i class="fas fa-plus"></i> Create New</button>
-              </div>
-              <div class="">
-                <button type="button" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
-              </div>
-              <div class="">
-                <button type="button" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe RC</button>
-              </div>
-              <div class="">
-                <button type="button" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete RC</button>
-              </div>
-            </div>
-
-          </section>
-
-          <section id="ds" style="display: none">
-            <div class="container-flex">
-              <div class="">
-                <button type="button" class="btn btn-primary btn-lg" onclick="deployInput()"><i class="fas fa-plus"></i> Create New</button>
-              </div>
-              <div class="">
-                <button type="button" class="btn btn-success btn-lg"><i class="fas fa-check"></i> Check Staus</button>
-              </div>
-              <div class="">
-                <button type="button" class="btn btn-info btn-lg"><i class="fas fa-scroll"></i> Describe DS</button>
-              </div>
-              <div class="">
-                <button type="button" class="btn btn-danger btn-lg"><i class="fas fa-trash"></i> Delete DS</button>
               </div>
             </div>
 
