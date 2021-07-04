@@ -9,21 +9,37 @@ img {
 }
 
 h1 {
-  color: #5F939A;
+  color: white;
   font-size: 4.625rem;
-  margin: 20vh auto 10vh auto;
+  margin: 0px;
   font-family: Roboto Mono, cursive;
   font-weight: 900;
   text-align: center;
+  
+  position: relative;
+  bottom: 40px;
+
+}
+#webui{
+  color: #007bff;
 }
 
 h2 {
-  color: #39A2DB;
+  color: #FFC074;
   font-size: 4.625rem;
   font-family: Roboto Mono, cursive;
   font-weight: 600;
   text-align: center;
-  margin: 10% auto auto;
+  margin: 0px;
+  position: relative;
+  bottom: 30px;
+  
+}
+#startButton{
+  color: white;
+  background-color: #005A8D;
+  position: relative;
+  top: 20px;
 }
 
 .container-flex {
@@ -36,3 +52,35 @@ h2 {
   margin-left: 3%;
   margin-bottom: 2%
 }
+
+#content{
+  display: none;
+  color: darkgray;
+  font-size: large;
+  font-weight: bold;
+
+}
+
+pre{
+  font-family: Roboto Mono, cursive;
+  color: grey;
+  font-size: large;
+  font-weight: 500;
+  width: 1100px;
+  height: 600px;
+  position: fixed
+}
+
+
+.inside{
+  background-image: url(https://pbs.twimg.com/media/DLQPvT6UIAAvl-5.jpg);
+  background-size: 1550px 1000px;
+  background-repeat: no-repeat;
+}
+
+.outside{
+  background-image: url(https://aster.cloud/wp-content/uploads/2020/05/kubernetes-DNS-Scaling-K8s.png);
+  background-size: 1550px 1000px;
+  background-repeat: no-repeat;
+}
+
