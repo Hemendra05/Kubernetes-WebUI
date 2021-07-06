@@ -73,13 +73,13 @@ def createSvc():
     resourceName = request.args.get('resourceName')
     svcType = request.args.get('svcName')
     port = int(request.args.get('port'))
-    
+
     output = sp.getoutput("kubectl expose {} {} --type={} --port={}".format(resource,resourceName,svcType,port))
     return "<pre> {} </pre>".format(output)
 
 @app.route('/svcStatus')
 def svcStatus():
-    
+
     output = sp.getoutput("kubectl get svc")
     return "<pre> {} </pre>".format(output)
 
@@ -98,14 +98,14 @@ def delSvc():
 
 @app.route('/rsStatus')
 def rsStatus():
-    
+
     output = sp.getoutput("kubectl get rs")
     return "<pre> {} </pre>".format(output)
 
 @app.route('/delAllRes')
 def delAllRes():
-    
+
     output = sp.getoutput("kubectl delete all --all")
     return "<pre> {} </pre>".format(output)
 
-
+app.run(host='0.0.0.0', port=5000, debug=True)
