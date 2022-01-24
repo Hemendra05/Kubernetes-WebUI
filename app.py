@@ -109,3 +109,5 @@ def delAllRes():
     return "<pre> {} </pre>".format(output)
 
 app.run(host='0.0.0.0', port=5000, debug=True)
+
+#end
